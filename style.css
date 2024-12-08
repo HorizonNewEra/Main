@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #e0f7ff;
+    padding: 10px;
+    border-bottom: 2px solid #0078d7;
+}
+
+.navbar button {
+    background-color: #ffffff;
+    border: 2px solid #0078d7;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.navbar button:hover {
+    background-color: #0078d7;
+    color: white;
+    transform: scale(1.1);
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e8f4ff;
+    padding: 10px;
+    border-bottom: 2px solid #0078d7;
+}
+
+.toolbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.toolbar-item img {
+    width: 50px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.toolbar-item span {
+    font-size: 12px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 180px);
+}
+
+.logo-container img {
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+}
+
+
+.footer-buttons {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+    background-color: #e0f7ff;
+    border-top: 2px solid #0078d7;
+}
+
+.footer-buttons button {
+    background-color: #ffffff;
+    border: 2px solid #0078d7;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.footer-buttons button:hover {
+    background-color: #0078d7;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .navbar button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .toolbar-item img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .toolbar-item span {
+        font-size: 10px;
+    }
+
+    .logo-container img {
+        width: 70%;
+    }
+
+    .footer-buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar button {
+        flex: 1 1 50%;
+        margin: 5px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .toolbar-item {
+        margin: 10px 0;
+    }
+
+    .footer-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
